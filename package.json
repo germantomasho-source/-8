@@ -1,0 +1,10 @@
+{
+  "name": "new-year-secret-roulette",
+  "version": "0.1.0",
+  "description": "Новогодняя рулетка — многопользовательская версия (этап 2: рулетка и распределение)",
+  "private": true,
+  "main": "server/server.js",
+  "scripts": { "start": "node server/server.js", "test": "node test/rooms.test.js && node test/connections.test.js && node test/draw.test.js && node test/ui.test.js && node test/ui-draw.test.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "ws": "^8.18.0" }
+}

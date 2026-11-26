@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: new-year-secret-roulette
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server/server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: TRUST_PROXY
+        value: "1"
+      # Для сохранения комнат при перезапуске подключите persistent disk
+      # и укажите DATA_FILE=/data/rooms.json (путь внутри диска).
